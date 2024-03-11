@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8F8F8F"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tempChoose"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#0E0E0E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.016"
+        tools:text="@string/tempChoose" />
+
+    <RadioGroup
+        android:id="@+id/tempGroup"
+        android:layout_width="223dp"
+        android:layout_height="158dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.028">
+
+        <RadioButton
+            android:id="@+id/btnDegFah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/degFah"
+            android:textColor="#000000"
+            tools:text="@string/degFah" />
+
+        <RadioButton
+            android:id="@+id/btnDegCel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/degCel"
+            android:textColor="#000000"
+            tools:text="@string/degCel" />
+
+        <RadioButton
+            android:id="@+id/btnDegKel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/degKel"
+            android:textColor="#000000"
+            tools:text="@string/degKel" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="31dp"
+        android:text="Convert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempGroup" />
+
+    <TextView
+        android:id="@+id/lblOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="46dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
