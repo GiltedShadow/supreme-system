@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">IntroAndroidApp</string>
+    <string name="degFah">Degrees Fahrenheit</string>
+    <string name="degCel">Degrees Celsius</string>
+    <string name="degKel">Degrees Kelvin</string>
+    <string name="tempChoose">Choose your temperature: </string>
+
+    <string name="enterTemp">Please enter the temperature, select the correct units and then press enter</string>
+</resources>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8F8F8F"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tempChoose"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#0E0E0E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.016"
+        tools:text="@string/tempChoose" />
+
+    <RadioGroup
+        android:id="@+id/tempGroup"
+        android:layout_width="223dp"
+        android:layout_height="158dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.172">
+
+        <RadioButton
+            android:id="@+id/btnDegFah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/degFah"
+            android:textColor="#000000"
+            tools:text="@string/degFah" />
+
+        <RadioButton
+            android:id="@+id/btnDegCel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/degCel"
+            android:textColor="#000000"
+            tools:text="@string/degCel" />
+
+        <RadioButton
+            android:id="@+id/btnDegKel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/degKel"
+            android:textColor="#000000"
+            tools:text="@string/degKel" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="56dp"
+        android:text="Convert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempGroup" />
+
+    <TextView
+        android:id="@+id/lblOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="46dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConvert" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="397dp"
+        android:text="@string/enterTemp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/lblOutputFah"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/enterTemp" />
+
+    <EditText
+        android:id="@+id/txtInputTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/tempGroup"
+        app:layout_constraintStart_toStartOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/lblOutputFah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/lblOutputCel"
+        app:layout_constraintStart_toStartOf="@+id/lblOutput"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/lblOutputCel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/lblOutputKel"
+        app:layout_constraintStart_toStartOf="@+id/lblOutputFah"
+        app:layout_constraintTop_toBottomOf="@+id/lblOutputFah" />
+
+    <TextView
+        android:id="@+id/lblOutputKel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="182dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/lblOutputCel"
+        app:layout_constraintTop_toBottomOf="@+id/lblOutputCel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="IntroAndroidApp">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/IntroAndroidApp.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
