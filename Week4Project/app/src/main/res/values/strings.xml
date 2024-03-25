@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">IntroAndroidApp</string>
+    <string name="degFah">Degrees Fahrenheit</string>
+    <string name="degCel">Degrees Celsius</string>
+    <string name="degKel">Degrees Kelvin</string>
+    <string name="tempChoose">Choose your temperature: </string>
+
+    <string name="enterTemp">Please enter the temperature, select the correct units and then press enter</string>
+
+    <string name="Welcome">Welcome to Alex Norment\'s App</string>
+    <string name="goWeather">Convert\nTemp</string>
+    <string name="goTicTacToe">Tic Tac Toe</string>
+    <string name="goInfo">Info</string>
+    <string name="goMusic">Favorite\nSong</string>
+    <string name="goTakePic">Take\nPicture</string>
+    <string name="goDraw">My\nDrawing</string>
+
+    <string name="mainMenu">Main Menu</string>
+    <string name="exit">Exit</string>
+
+</resources>
