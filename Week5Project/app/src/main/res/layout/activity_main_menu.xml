@@ -17,7 +17,6 @@
         android:gravity="center_horizontal"
         android:text="@string/Welcome"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        style="@style/TextView"
         tools:ignore="MissingConstraints" />
 
     <GridLayout
