@@ -41,14 +41,28 @@ public class MainMenuActivity extends AppCompatActivity {
             }
         });
 
+        Button btnTicTacToe=(Button) findViewById(R.id.btnTicTacToe);
+        btnTicTacToe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTicTacToe();
+            }
+        });
+
     }
 
     private void goWeather() {
         Intent intent = new Intent(MainMenuActivity.this, WeatherActivity.class);
         this.startActivities(new Intent[]{intent});
     }
+
     private void goDraw() {
         Intent intent = new Intent(MainMenuActivity.this, MyDrawing.class);
+        this.startActivities(new Intent[]{intent});
+    }
+
+    private void goTicTacToe() {
+        Intent intent = new Intent(MainMenuActivity.this, TicTacToeActivity.class);
         this.startActivities(new Intent[]{intent});
     }
 }
