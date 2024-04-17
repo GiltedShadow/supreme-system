@@ -5,64 +5,60 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#616161"
     tools:context=".MainMenuActivity">
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="369dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginRight="39dp"
-        android:layout_marginBottom="267dp"
-        android:clickable="false"
-        android:gravity="center"
-        android:text="Welcome to the General Dice Roller!"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/btnPathFinder"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnDND5"
-        android:layout_width="239dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="193dp"
-        android:layout_marginLeft="193dp"
-        android:layout_marginTop="216dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="@string/dnd5e"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        tools:text="@string/dnd5e" />
 
     <Button
         android:id="@+id/btnPathFinder"
-        android:layout_width="0dp"
-        android:layout_height="51dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
         android:text="@string/pathF"
         app:layout_constraintBottom_toTopOf="@+id/btnGeneralRoll"
-        app:layout_constraintEnd_toEndOf="@+id/btnDND5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnDND5"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/btnDND5"
         tools:text="@string/pathF" />
 
     <Button
+        android:id="@+id/btnDND5"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/dnd5e"
+        app:layout_constraintBottom_toTopOf="@+id/btnPathFinder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.77"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@string/dnd5e" />
+
+    <Button
         android:id="@+id/btnGeneralRoll"
-        android:layout_width="0dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="583dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
         android:text="@string/generalRoller"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnPathFinder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnPathFinder"
         app:layout_constraintTop_toBottomOf="@+id/btnPathFinder"
         tools:text="@string/generalRoller" />
+
+    <TextView
+        android:id="@+id/txtMainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="139dp"
+        android:gravity="center"
+        android:text="Welcome to the General Dice Roller!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Welcome to the General Dice Roller!" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
