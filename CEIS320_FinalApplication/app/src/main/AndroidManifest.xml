@@ -13,7 +13,46 @@
         android:theme="@style/Theme.CEIS320_FinalApplication"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".PercentileRollerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OneHundredSideRollerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FiftySideRollerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TwentySideRollerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TwelveSideRollerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EightSideRollerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SixSideRollerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ThreeSideRollerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FourSideRollerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TwoSideRollerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GeneralRollerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PathfinderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FifthEditionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainMenuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

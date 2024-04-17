@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">CEIS320_FinalApplication</string>
+    <string name="app_name">Dice Roller For All</string>
+
+    <string name="d2Roller">Roll a D2</string>
+    <string name="d3Roller">Roll a D3</string>
+    <string name="d4Roller">Roll a D4</string>
+    <string name="d6Roller">Roll a D6</string>
+    <string name="d8Roller">Roll a D8</string>
+    <string name="d12Roller">Roll a D12</string>
+    <string name="d20Roller">Roll a D20</string>
+    <string name="d50Roller">Roll a D50</string>
+    <string name="d100Roller">Roll a D100</string>
+    <string name="percentileRoller">Roll Percentile</string>
+
+    <string name="dnd5e">Dungeons and Dragons 5th Edition</string>
+    <string name="pathF">Pathfinder</string>
+    <string name="generalRoller">General Dice</string>
 </resources>
