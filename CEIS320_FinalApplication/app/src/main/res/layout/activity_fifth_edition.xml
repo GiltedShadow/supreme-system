@@ -9,7 +9,7 @@
     tools:context=".FifthEditionActivity">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtDnDtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -26,7 +26,9 @@
         android:layout_width="125dp"
         android:layout_height="75dp"
         android:layout_marginTop="64dp"
+        android:background="#D3D3D3"
         android:text="@string/d20"
+        app:backgroundTint="@color/design_default_color_error"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnDnD12"
@@ -38,7 +40,9 @@
         android:layout_width="125dp"
         android:layout_height="75dp"
         android:layout_marginTop="64dp"
+        android:background="#D3D3D3"
         android:text="@string/d10"
+        app:backgroundTint="@color/design_default_color_error"
         app:layout_constraintEnd_toStartOf="@+id/btnDnD12"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +54,9 @@
         android:layout_width="125dp"
         android:layout_height="75dp"
         android:layout_marginTop="64dp"
+        android:background="#D3D3D3"
         android:text="@string/d12"
+        app:backgroundTint="@color/design_default_color_error"
         app:layout_constraintEnd_toStartOf="@+id/btnDnD20"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnDnD10"
@@ -62,7 +68,9 @@
         android:layout_width="125dp"
         android:layout_height="75dp"
         android:layout_marginTop="315dp"
+        android:background="#D3D3D3"
         android:text="@string/d8"
+        app:backgroundTint="@color/design_default_color_error"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnDnD6"
@@ -74,7 +82,9 @@
         android:layout_width="125dp"
         android:layout_height="75dp"
         android:layout_marginTop="315dp"
+        android:background="#D3D3D3"
         android:text="@string/d6"
+        app:backgroundTint="@color/design_default_color_error"
         app:layout_constraintEnd_toStartOf="@+id/btnDnD8"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnDnD4"
@@ -83,10 +93,13 @@
 
     <Button
         android:id="@+id/btnDnD4"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="125dp"
         android:layout_height="75dp"
         android:layout_marginTop="315dp"
+        android:background="#D3D3D3"
         android:text="@string/d4"
+        app:backgroundTint="@color/design_default_color_error"
         app:layout_constraintEnd_toStartOf="@+id/btnDnD6"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,7 +111,9 @@
         android:layout_width="wrap_content"
         android:layout_height="75dp"
         android:layout_marginTop="72dp"
+        android:background="#D3D3D3"
         android:text="@string/advd20"
+        app:backgroundTint="@color/design_default_color_error"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnDnDdav"
@@ -109,7 +124,9 @@
         android:layout_width="wrap_content"
         android:layout_height="75dp"
         android:layout_marginTop="72dp"
+        android:background="#D3D3D3"
         android:text="@string/davd20"
+        app:backgroundTint="@color/design_default_color_error"
         app:layout_constraintEnd_toStartOf="@+id/btnDnDadv"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -117,11 +134,25 @@
         app:layout_constraintTop_toBottomOf="@+id/btnDnD10" />
 
     <TextView
-        android:id="@+id/txtDnD4"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtDnD8"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:fontFamily="monospace"
-        android:text="0"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/btnDnD8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtDnD6" />
+
+    <TextView
+        android:id="@+id/txtDnD4"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/btnDnD4"
         app:layout_constraintEnd_toStartOf="@+id/txtDnD6"
@@ -130,10 +161,11 @@
 
     <TextView
         android:id="@+id/txtDnD6"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:fontFamily="monospace"
-        android:text="0"
+        android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/btnDnD6"
         app:layout_constraintEnd_toStartOf="@+id/txtDnD8"
@@ -141,47 +173,12 @@
         app:layout_constraintStart_toEndOf="@+id/txtDnD4" />
 
     <TextView
-        android:id="@+id/txtDnD8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="monospace"
-        android:text="0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/btnDnD8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/txtDnD6" />
-
-    <TextView
-        android:id="@+id/txtDnD10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="monospace"
-        android:text="0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/btnDnD10"
-        app:layout_constraintEnd_toStartOf="@+id/txtDnD12"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/txtDnD12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="monospace"
-        android:text="0"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/btnDnD12"
-        app:layout_constraintEnd_toStartOf="@+id/txtDnD20"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/txtDnD10" />
-
-    <TextView
         android:id="@+id/txtDnD20"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:fontFamily="monospace"
-        android:text="0"
+        android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/btnDnD20"
         app:layout_constraintEnd_toEndOf="parent"
@@ -189,27 +186,55 @@
         app:layout_constraintStart_toEndOf="@+id/txtDnD12" />
 
     <TextView
-        android:id="@+id/txtDnDdav"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtDnD12"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:fontFamily="monospace"
-        android:text="0"
+        android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/btnDnDdav"
-        app:layout_constraintEnd_toStartOf="@+id/txtDnDadv"
+        app:layout_constraintBottom_toTopOf="@+id/btnDnD12"
+        app:layout_constraintEnd_toStartOf="@+id/txtDnD20"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtDnD10" />
+
+    <TextView
+        android:id="@+id/txtDnD10"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/btnDnD10"
+        app:layout_constraintEnd_toStartOf="@+id/txtDnD12"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtDnDadv"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:fontFamily="monospace"
-        android:text="0"
+        android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/btnDnDadv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/txtDnDdav" />
+
+    <TextView
+        android:id="@+id/txtDnDdav"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/btnDnDdav"
+        app:layout_constraintEnd_toStartOf="@+id/txtDnDadv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

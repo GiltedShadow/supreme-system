@@ -29,25 +29,33 @@ Dice pages - Percentile, 100, 50, 20, 12, 8, 6, 4, 3, 2
             return insets;
         });
 
-        Button btnInfo=(Button) findViewById(R.id.btnDND5);
-        btnInfo.setOnClickListener(new View.OnClickListener() {
+        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
+        btnDnD5e.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { goDND5(); }
         });
 
-        Button btnTakePic=(Button) findViewById(R.id.btnGeneralRoll);
-        btnTakePic.setOnClickListener(new View.OnClickListener() {
+        Button btnGeneralRoll=(Button) findViewById(R.id.btnGeneralRoll);
+        btnGeneralRoll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goGeneralRoll();
             }
         });
 
-        Button btnFavSong=(Button) findViewById(R.id.btnPathFinder);
-        btnFavSong.setOnClickListener(new View.OnClickListener() {
+        Button btnPathF=(Button) findViewById(R.id.btnPathFinder);
+        btnPathF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goPathFinder();
+            }
+        });
+
+        Button btnMultGenRoll=(Button) findViewById(R.id.btnMultipleGeneralRoll);
+        btnMultGenRoll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goMultipleGeneral();
             }
         });
     }
@@ -64,6 +72,11 @@ Dice pages - Percentile, 100, 50, 20, 12, 8, 6, 4, 3, 2
 
     private void goPathFinder() {
         Intent intent = new Intent(MainMenuActivity.this, PathfinderActivity.class);
+        this.startActivities(new Intent[]{intent});
+    }
+
+    private void goMultipleGeneral() {
+        Intent intent = new Intent(MainMenuActivity.this, MultipleGeneralRollerActivity.class);
         this.startActivities(new Intent[]{intent});
     }
 }

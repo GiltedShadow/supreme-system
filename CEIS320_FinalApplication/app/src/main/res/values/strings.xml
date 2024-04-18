@@ -16,6 +16,7 @@
     <string name="dnd5e">Dungeons and Dragons 5th Edition</string>
     <string name="pathF">Pathfinder</string>
     <string name="generalRoller">General Dice</string>
+    <string name="multGeneralRoller">Multiple General Dice</string>
 
     <string name="d2">D2</string>
     <string name="d3">D3</string>

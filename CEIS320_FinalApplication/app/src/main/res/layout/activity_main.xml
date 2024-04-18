@@ -12,7 +12,10 @@
         android:id="@+id/btnPathFinder"
         android:layout_width="300dp"
         android:layout_height="60dp"
+        android:layout_marginTop="2dp"
+        android:background="#D3D3D3"
         android:text="@string/pathF"
+        app:backgroundTint="@color/design_default_color_error"
         app:layout_constraintBottom_toTopOf="@+id/btnGeneralRoll"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -25,7 +28,9 @@
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="100dp"
+        android:background="#D3D3D3"
         android:text="@string/dnd5e"
+        app:backgroundTint="@color/design_default_color_error"
         app:layout_constraintBottom_toTopOf="@+id/btnPathFinder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.77"
@@ -38,7 +43,10 @@
         android:id="@+id/btnGeneralRoll"
         android:layout_width="300dp"
         android:layout_height="60dp"
+        android:layout_marginTop="2dp"
+        android:background="#D3D3D3"
         android:text="@string/generalRoller"
+        app:backgroundTint="@color/design_default_color_error"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -72,5 +80,21 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnMultipleGeneralRoll"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="114dp"
+        android:layout_marginLeft="114dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
+        android:background="#D3D3D3"
+        android:text="General Multiples of Dice"
+        app:backgroundTint="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGeneralRoll" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
