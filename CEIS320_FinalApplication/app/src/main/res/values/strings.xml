@@ -1,18 +1,34 @@
 <resources>
+    <string name="welcome">Welcome to</string>
     <string name="app_name">Dice Roller For All</string>
 
-    <string name="d2Roller">Roll a D2</string>
-    <string name="d3Roller">Roll a D3</string>
-    <string name="d4Roller">Roll a D4</string>
-    <string name="d6Roller">Roll a D6</string>
-    <string name="d8Roller">Roll a D8</string>
-    <string name="d12Roller">Roll a D12</string>
-    <string name="d20Roller">Roll a D20</string>
-    <string name="d50Roller">Roll a D50</string>
-    <string name="d100Roller">Roll a D100</string>
-    <string name="percentileRoller">Roll Percentile</string>
+    <string name="d2Roller">Roll multiple D2s</string>
+    <string name="d3Roller">Roll multiple D3s</string>
+    <string name="d4Roller">Roll multiple D4s</string>
+    <string name="d6Roller">Roll multiple D6s</string>
+    <string name="d8Roller">Roll multiple D8s</string>
+    <string name="d12Roller">Roll multiple D12s</string>
+    <string name="d20Roller">Roll multiple D20s</string>
+    <string name="d50Roller">Roll multiple D50s</string>
+    <string name="d100Roller">Roll multiple D100s</string>
+    <string name="percentileRoller">Roll multiple Percentiles</string>
 
     <string name="dnd5e">Dungeons and Dragons 5th Edition</string>
     <string name="pathF">Pathfinder</string>
     <string name="generalRoller">General Dice</string>
+
+    <string name="d2">D2</string>
+    <string name="d3">D3</string>
+    <string name="d4">D4</string>
+    <string name="d6">D6</string>
+    <string name="d8">D8</string>
+    <string name="d10">D10</string>
+    <string name="d12">D12</string>
+    <string name="d20">D20</string>
+    <string name="d50">D50</string>
+    <string name="d100">D100</string>
+    <string name="percentile">Percentile</string>
+    <string name="advd20">D20 with Advantage</string>
+    <string name="davd20">D20 with Disadvantage</string>
+
 </resources>
