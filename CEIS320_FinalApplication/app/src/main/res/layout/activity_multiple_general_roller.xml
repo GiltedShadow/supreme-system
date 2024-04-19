@@ -20,4 +20,107 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/multGeneralRoller" />
+
+    <Button
+        android:id="@+id/btnMultGenD2"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/d2Roller"
+        app:layout_constraintBottom_toTopOf="@+id/btnMultGenD3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnMultGenPercentile"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="@string/percentileRoller"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnMultGenD100"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultGenD100" />
+
+    <Button
+        android:id="@+id/btnMultGenD100"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="@string/d100Roller"
+        app:layout_constraintBottom_toTopOf="@+id/btnMultGenPercentile"
+        app:layout_constraintEnd_toEndOf="@+id/btnMultGenD50"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultGenD50" />
+
+    <Button
+        android:id="@+id/btnMultGenD50"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="@string/d50Roller"
+        app:layout_constraintBottom_toTopOf="@+id/btnMultGenD100"
+        app:layout_constraintEnd_toEndOf="@+id/btnMultGenD20"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultGenD20" />
+
+    <Button
+        android:id="@+id/btnMultGenD20"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="@string/d20Roller"
+        app:layout_constraintBottom_toTopOf="@+id/btnMultGenD50"
+        app:layout_constraintEnd_toEndOf="@+id/btnMultGenD12"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultGenD12" />
+
+    <Button
+        android:id="@+id/btnMultGenD12"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="@string/d12Roller"
+        app:layout_constraintBottom_toTopOf="@+id/btnMultGenD20"
+        app:layout_constraintEnd_toEndOf="@+id/btnMultGenD10"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultGenD10" />
+
+    <Button
+        android:id="@+id/btnMultGenD10"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="@string/d10Roller"
+        app:layout_constraintBottom_toTopOf="@+id/btnMultGenD12"
+        app:layout_constraintEnd_toEndOf="@+id/btnMultGenD8"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultGenD8" />
+
+    <Button
+        android:id="@+id/btnMultGenD8"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="@string/d8Roller"
+        app:layout_constraintBottom_toTopOf="@+id/btnMultGenD10"
+        app:layout_constraintEnd_toEndOf="@+id/btnMultGenD6"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultGenD6" />
+
+    <Button
+        android:id="@+id/btnMultGenD6"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="@string/d6Roller"
+        app:layout_constraintBottom_toTopOf="@+id/btnMultGenD8"
+        app:layout_constraintEnd_toEndOf="@+id/btnMultGenD4"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultGenD4" />
+
+    <Button
+        android:id="@+id/btnMultGenD3"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="@string/d3Roller"
+        app:layout_constraintBottom_toTopOf="@+id/btnMultGenD4"
+        app:layout_constraintEnd_toEndOf="@+id/btnMultGenD2"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultGenD2" />
+
+    <Button
+        android:id="@+id/btnMultGenD4"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="@string/d4Roller"
+        app:layout_constraintBottom_toTopOf="@+id/btnMultGenD6"
+        app:layout_constraintEnd_toEndOf="@+id/btnMultGenD3"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultGenD3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

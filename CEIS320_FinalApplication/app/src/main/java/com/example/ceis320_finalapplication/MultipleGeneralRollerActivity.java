@@ -1,6 +1,9 @@
 package com.example.ceis320_finalapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +23,106 @@ public class MultipleGeneralRollerActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
+        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { goDND5(); }
+        });
+        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
+        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { goDND5(); }
+        });
+        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
+        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { goDND5(); }
+        });
+        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
+        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { goDND5(); }
+        });
+        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
+        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { goDND5(); }
+        });
+        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
+        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { goDND5(); }
+        });
+        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
+        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { goDND5(); }
+        });
+        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
+        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { goDND5(); }
+        });
+        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
+        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { goDND5(); }
+        });
+        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
+        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { goDND5(); }
+        });
+        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
+        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { goDND5(); }
+        });
+    }
+
+    private void goDND5() {
+        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+        this.startActivities(new Intent[]{intent});
+    }
+    private void goDND5() {
+        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+        this.startActivities(new Intent[]{intent});
+    }
+    private void goDND5() {
+        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+        this.startActivities(new Intent[]{intent});
+    }
+    private void goDND5() {
+        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+        this.startActivities(new Intent[]{intent});
+    }
+    private void goDND5() {
+        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+        this.startActivities(new Intent[]{intent});
+    }
+    private void goDND5() {
+        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+        this.startActivities(new Intent[]{intent});
+    }
+    private void goDND5() {
+        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+        this.startActivities(new Intent[]{intent});
+    }
+    private void goDND5() {
+        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+        this.startActivities(new Intent[]{intent});
+    }
+    private void goDND5() {
+        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+        this.startActivities(new Intent[]{intent});
+    }
+    private void goDND5() {
+        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+        this.startActivities(new Intent[]{intent});
+    }
+    private void goDND5() {
+        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+        this.startActivities(new Intent[]{intent});
     }
 }

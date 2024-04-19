@@ -11,11 +11,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Random;
+
 public class MainMenuActivity extends AppCompatActivity {
 /*
 TODO
-Selection pages -  Dnd 5e, Pathfinder, general
+Selection pages -  Dnd 5e, Pathfinder?, general
 Dice pages - Percentile, 100, 50, 20, 12, 8, 6, 4, 3, 2
+Find good color combos, use different combos in order to get the user in a different feel for each page
 
  */
     @Override
@@ -58,6 +61,13 @@ Dice pages - Percentile, 100, 50, 20, 12, 8, 6, 4, 3, 2
                 goMultipleGeneral();
             }
         });
+    }
+
+    public static String getRandomNumber(int max){
+        int randomNumber;
+        Random random = new Random();
+        randomNumber = random.nextInt(max)+1;
+        return String.format("%d", randomNumber);
     }
 
     private void goDND5() {

@@ -59,27 +59,28 @@ public class FifthEditionActivity extends AppCompatActivity  implements View.OnC
         lblOutputD20 = (TextView) findViewById(R.id.txtDnD20);
         lblOutputAdv20 = (TextView) findViewById(R.id.txtDnDadv);
         lblOutputDadv20 = (TextView) findViewById(R.id.txtDnDdav);
+        //can this be made into a case statement?
         if(btnD4.isPressed()){
-            lblOutputD4.setText(getRandomNumber(4));
+            lblOutputD4.setText(MainMenuActivity.getRandomNumber(4));
         }
-        if(btnD6.isPressed()){
-            lblOutputD6.setText((getRandomNumber(6)));
+        else if(btnD6.isPressed()){
+            lblOutputD6.setText((MainMenuActivity.getRandomNumber(6)));
         }
-        if(btnD8.isPressed()){
-            lblOutputD8.setText((getRandomNumber(8)));
+        else if(btnD8.isPressed()){
+            lblOutputD8.setText((MainMenuActivity.getRandomNumber(8)));
         }
-        if(btnD10.isPressed()){
-            lblOutputD10.setText((getRandomNumber(10)));
+        else if(btnD10.isPressed()){
+            lblOutputD10.setText((MainMenuActivity.getRandomNumber(10)));
         }
-        if(btnD12.isPressed()){
-            lblOutputD12.setText((getRandomNumber(12)));
+        else if(btnD12.isPressed()){
+            lblOutputD12.setText((MainMenuActivity.getRandomNumber(12)));
         }
-        if(btnD20.isPressed()){
-            lblOutputD20.setText((getRandomNumber(20)));
+        else if(btnD20.isPressed()){
+            lblOutputD20.setText((MainMenuActivity.getRandomNumber(20)));
         }
-        if(btnAdv20.isPressed()){
-            String x = getRandomNumber(20);
-            String y = getRandomNumber(20);
+        else if(btnAdv20.isPressed()){
+            String x = MainMenuActivity.getRandomNumber(20);
+            String y = MainMenuActivity.getRandomNumber(20);
             if(Integer.parseInt(x)>Integer.parseInt(y)){
                 lblOutputAdv20.setText(x);
             }
@@ -87,9 +88,9 @@ public class FifthEditionActivity extends AppCompatActivity  implements View.OnC
                 lblOutputAdv20.setText(y);
             }
         }
-        if(btnDadv20.isPressed()){
-            String x = getRandomNumber(20);
-            String y = getRandomNumber(20);
+        else if(btnDadv20.isPressed()){
+            String x = MainMenuActivity.getRandomNumber(20);
+            String y = MainMenuActivity.getRandomNumber(20);
             if(Integer.parseInt(x)<Integer.parseInt(y)){
                 lblOutputDadv20.setText(x);
             }
@@ -99,10 +100,5 @@ public class FifthEditionActivity extends AppCompatActivity  implements View.OnC
         }
     }
 
-    private String getRandomNumber(int max){
-        int randomNumber;
-        Random random = new Random();
-        randomNumber = random.nextInt(max)+1;
-        return String.format("%d", randomNumber);
-    }
+
 }
