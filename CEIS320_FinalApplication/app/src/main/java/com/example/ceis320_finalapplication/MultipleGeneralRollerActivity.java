@@ -24,105 +24,106 @@ public class MultipleGeneralRollerActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
-        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+        //Commented out code here is a previous design that used multiple buttons to go to each individual page
+        /*Button btnMultiD2=(Button) findViewById(R.id.btnMultGenD2);
+        btnMultiD2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { goDND5(); }
+            public void onClick(View v) { goMultiRollD2(); }
         });
-        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
-        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+        Button btnMultiD3=(Button) findViewById(R.id.btnMultGenD3);
+        btnMultiD3.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { goDND5(); }
+            public void onClick(View v) { goMultiRollD3(); }
         });
-        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
-        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+        Button btnMultiD4=(Button) findViewById(R.id.btnMultGenD4);
+        btnMultiD4.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { goDND5(); }
+            public void onClick(View v) { goMultiRollD4(); }
         });
-        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
-        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+        Button btnMultiD6=(Button) findViewById(R.id.btnMultGenD6);
+        btnMultiD6.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { goDND5(); }
+            public void onClick(View v) { goMultiRollD6(); }
         });
-        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
-        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+        Button btnMultiD8=(Button) findViewById(R.id.btnMultGenD8);
+        btnMultiD8.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { goDND5(); }
+            public void onClick(View v) { goMultiRollD8(); }
         });
-        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
-        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+        Button btnMultiD10=(Button) findViewById(R.id.btnMultGenD10);
+        btnMultiD10.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { goDND5(); }
+            public void onClick(View v) { goMultiRollD10(); }
         });
-        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
-        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+        Button btnMultiD212=(Button) findViewById(R.id.btnMultGenD12);
+        btnMultiD212.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { goDND5(); }
+            public void onClick(View v) { goMultiRollD12(); }
         });
-        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
-        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+        Button btnMultiD20=(Button) findViewById(R.id.btnMultGenD20);
+        btnMultiD20.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { goDND5(); }
+            public void onClick(View v) { goMultiRollD20(); }
         });
-        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
-        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+        Button btnMultiD50=(Button) findViewById(R.id.btnMultGenD50);
+        btnMultiD50.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { goDND5(); }
+            public void onClick(View v) { goMultiRollD50(); }
         });
-        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
-        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+        Button btnMultiD100=(Button) findViewById(R.id.btnMultGenD100);
+        btnMultiD100.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { goDND5(); }
+            public void onClick(View v) { goMultiRollD100(); }
         });
-        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
-        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+        Button btnMultiPercentile=(Button) findViewById(R.id.btnMultGenPercentile);
+        btnMultiPercentile.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { goDND5(); }
-        });
+            public void onClick(View v) { goMultiRollPercentile(); }
+        });*/
     }
 
-    private void goDND5() {
-        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+    /*private void goMultiRollD2() {
+        Intent intent = new Intent(MultipleGeneralRollerActivity.this, TwoSideRollerActivity.class);
         this.startActivities(new Intent[]{intent});
     }
-    private void goDND5() {
-        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+    private void goMultiRollD3() {
+        Intent intent = new Intent(MultipleGeneralRollerActivity.this, ThreeSideRollerActivity.class);
         this.startActivities(new Intent[]{intent});
     }
-    private void goDND5() {
-        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+    private void goMultiRollD4() {
+        Intent intent = new Intent(MultipleGeneralRollerActivity.this, FourSideRollerActivity.class);
         this.startActivities(new Intent[]{intent});
     }
-    private void goDND5() {
-        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+    private void goMultiRollD6() {
+        Intent intent = new Intent(MultipleGeneralRollerActivity.this, SixSideRollerActivity.class);
         this.startActivities(new Intent[]{intent});
     }
-    private void goDND5() {
-        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+    private void goMultiRollD8() {
+        Intent intent = new Intent(MultipleGeneralRollerActivity.this, EightSideRollerActivity.class);
         this.startActivities(new Intent[]{intent});
     }
-    private void goDND5() {
-        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+    private void goMultiRollD10() {
+        Intent intent = new Intent(MultipleGeneralRollerActivity.this, TenSideRollerActivity.class);
         this.startActivities(new Intent[]{intent});
     }
-    private void goDND5() {
-        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+    private void goMultiRollD12() {
+        Intent intent = new Intent(MultipleGeneralRollerActivity.this, TwelveSideRollerActivity.class);
         this.startActivities(new Intent[]{intent});
     }
-    private void goDND5() {
-        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+    private void goMultiRollD20() {
+        Intent intent = new Intent(MultipleGeneralRollerActivity.this, TwentySideRollerActivity.class);
         this.startActivities(new Intent[]{intent});
     }
-    private void goDND5() {
-        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+    private void goMultiRollD50() {
+        Intent intent = new Intent(MultipleGeneralRollerActivity.this, FiftySideRollerActivity.class);
         this.startActivities(new Intent[]{intent});
     }
-    private void goDND5() {
-        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+    private void goMultiRollD100() {
+        Intent intent = new Intent(MultipleGeneralRollerActivity.this, OneHundredSideRollerActivity.class);
         this.startActivities(new Intent[]{intent});
     }
-    private void goDND5() {
-        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+    private void goMultiRollPercentile() {
+        Intent intent = new Intent(MultipleGeneralRollerActivity.this, PercentileRollerActivity.class);
         this.startActivities(new Intent[]{intent});
-    }
+    }*/
 }

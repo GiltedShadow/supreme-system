@@ -21,13 +21,13 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/multGeneralRoller" />
 
-    <Button
+    <!--<Button
         android:id="@+id/btnMultGenD2"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="336dp"
+        android:layout_marginRight="336dp"
         android:text="@string/d2Roller"
         app:layout_constraintBottom_toTopOf="@+id/btnMultGenD3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,6 +121,80 @@
         android:text="@string/d4Roller"
         app:layout_constraintBottom_toTopOf="@+id/btnMultGenD6"
         app:layout_constraintEnd_toEndOf="@+id/btnMultGenD3"
-        app:layout_constraintTop_toBottomOf="@+id/btnMultGenD3" />
+        app:layout_constraintTop_toBottomOf="@+id/btnMultGenD3" />-->
+
+    <RadioGroup
+        android:layout_width="202dp"
+        android:layout_height="533dp"
+        android:layout_marginTop="218dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/d2Roller" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/d3Roller" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/d4Roller" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/d6Roller" />
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/d8Roller" />
+
+        <RadioButton
+            android:id="@+id/radioButton7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/d10Roller" />
+
+        <RadioButton
+            android:id="@+id/radioButton8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/d12Roller" />
+
+        <RadioButton
+            android:id="@+id/radioButton9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/d20Roller" />
+
+        <RadioButton
+            android:id="@+id/radioButton10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/d50Roller" />
+
+        <RadioButton
+            android:id="@+id/radioButton11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/d100Roller" />
+
+        <RadioButton
+            android:id="@+id/radioButton12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/percentileRoller" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.CEIS320_FinalApplication"
         tools:targetApi="31">
         <activity
+            android:name=".TenSideRollerActivity"
+            android:exported="false" />
+        <activity
             android:name=".MultipleGeneralRollerActivity"
             android:exported="false" />
         <activity
