@@ -33,4 +33,29 @@
     <string name="advd20">D20 with Advantage</string>
     <string name="davd20">D20 with Disadvantage</string>
 
+    <string-array name="multipleDice">
+        <item>Roll multiple D2s</item>
+        <item>Roll multiple D3s</item>
+        <item>Roll multiple D4s</item>
+        <item>Roll multiple D6s</item>
+        <item>Roll multiple D8s</item>
+        <item>Roll multiple D10s</item>
+        <item>Roll multiple D12s</item>
+        <item>Roll multiple D20s</item>
+        <item>Roll multiple D50s</item>
+        <item>Roll multiple D100s</item>
+        <item>Roll multiple Percentile Die</item>
+    </string-array>
+    <string-array name="amountToRoll">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>Custom</item>
+    </string-array>
+
 </resources>

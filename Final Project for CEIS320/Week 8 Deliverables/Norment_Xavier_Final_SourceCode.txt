@@ -1,0 +1,535 @@
+######
+START MainMenuActivity.java
+######
+
+package com.example.ceis320_finalapplication;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+import java.util.Random;
+
+public class MainMenuActivity extends AppCompatActivity {
+/*
+TODO
+Selection pages -  Dnd 5e, Pathfinder?, general
+Dice pages - Percentile, 100, 50, 20, 12, 8, 6, 4, 3, 2
+Find good color combos, use different combos in order to get the user in a different feel for each page
+
+ */
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        Button btnDnD5e=(Button) findViewById(R.id.btnDND5);
+        btnDnD5e.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { goDND5(); }
+        });
+
+        Button btnGeneralRoll=(Button) findViewById(R.id.btnGeneralRoll);
+        btnGeneralRoll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goGeneralRoll();
+            }
+        });
+
+        Button btnPathF=(Button) findViewById(R.id.btnPathFinder);
+        btnPathF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goPathFinder();
+            }
+        });
+
+        Button btnMultGenRoll=(Button) findViewById(R.id.btnMultipleGeneralRoll);
+        btnMultGenRoll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goMultipleGeneral();
+            }
+        });
+    }
+
+    public static String getRandomNumber(int max){
+        int randomNumber;
+        Random random = new Random();
+        randomNumber = random.nextInt(max)+1;
+        return String.format("%d", randomNumber);
+    }
+
+    private void goDND5() {
+        Intent intent = new Intent(MainMenuActivity.this, FifthEditionActivity.class);
+        this.startActivities(new Intent[]{intent});
+    }
+
+    private void goGeneralRoll() {
+        Intent intent = new Intent(MainMenuActivity.this, GeneralRollerActivity.class);
+        this.startActivities(new Intent[]{intent});
+    }
+
+    private void goPathFinder() {
+        Intent intent = new Intent(MainMenuActivity.this, PathfinderActivity.class);
+        this.startActivities(new Intent[]{intent});
+    }
+
+    private void goMultipleGeneral() {
+        Intent intent = new Intent(MainMenuActivity.this, MultipleGeneralRollerActivity.class);
+        this.startActivities(new Intent[]{intent});
+    }
+}
+
+
+######
+END MainMenuActivity.java
+
+START FifthEditionActivity.java
+######
+
+package com.example.ceis320_finalapplication;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+import java.util.Random;
+
+//import Java.util.Random;
+
+public class FifthEditionActivity extends AppCompatActivity  implements View.OnClickListener {
+    private TextView lblOutputD4, lblOutputD6, lblOutputD8, lblOutputD10, lblOutputD12, lblOutputD20, lblOutputDadv20, lblOutputAdv20;
+    private Button btnD4, btnD6, btnD8, btnD10, btnD12, btnD20, btnDadv20, btnAdv20;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_fifth_edition);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+        btnD4 = (Button) findViewById(R.id.btnDnD4);
+        btnD4.setOnClickListener(this);
+        btnD6 = (Button) findViewById(R.id.btnDnD6);
+        btnD6.setOnClickListener(this);
+        btnD8 = (Button) findViewById(R.id.btnDnD8);
+        btnD8.setOnClickListener(this);
+        btnD10 = (Button) findViewById(R.id.btnDnD10);
+        btnD10.setOnClickListener(this);
+        btnD12 = (Button) findViewById(R.id.btnDnD12);
+        btnD12.setOnClickListener(this);
+        btnD20 = (Button) findViewById(R.id.btnDnD20);
+        btnD20.setOnClickListener(this);
+        btnDadv20 = (Button) findViewById(R.id.btnDnDdav);
+        btnDadv20.setOnClickListener(this);
+        btnAdv20 = (Button) findViewById(R.id.btnDnDadv);
+        btnAdv20.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        lblOutputD4 = (TextView) findViewById(R.id.txtDnD4);
+        lblOutputD6 = (TextView) findViewById(R.id.txtDnD6);
+        lblOutputD8 = (TextView) findViewById(R.id.txtDnD8);
+        lblOutputD10 = (TextView) findViewById(R.id.txtDnD10);
+        lblOutputD12 = (TextView) findViewById(R.id.txtDnD12);
+        lblOutputD20 = (TextView) findViewById(R.id.txtDnD20);
+        lblOutputAdv20 = (TextView) findViewById(R.id.txtDnDadv);
+        lblOutputDadv20 = (TextView) findViewById(R.id.txtDnDdav);
+        //can this be made into a case statement?
+        if(btnD4.isPressed()){
+            lblOutputD4.setText(MainMenuActivity.getRandomNumber(4));
+        }
+        else if(btnD6.isPressed()){
+            lblOutputD6.setText((MainMenuActivity.getRandomNumber(6)));
+        }
+        else if(btnD8.isPressed()){
+            lblOutputD8.setText((MainMenuActivity.getRandomNumber(8)));
+        }
+        else if(btnD10.isPressed()){
+            lblOutputD10.setText((MainMenuActivity.getRandomNumber(10)));
+        }
+        else if(btnD12.isPressed()){
+            lblOutputD12.setText((MainMenuActivity.getRandomNumber(12)));
+        }
+        else if(btnD20.isPressed()){
+            lblOutputD20.setText((MainMenuActivity.getRandomNumber(20)));
+        }
+        else if(btnAdv20.isPressed()){
+            String x = MainMenuActivity.getRandomNumber(20);
+            String y = MainMenuActivity.getRandomNumber(20);
+            if(Integer.parseInt(x)>Integer.parseInt(y)){
+                lblOutputAdv20.setText(x);
+            }
+            else{
+                lblOutputAdv20.setText(y);
+            }
+        }
+        else if(btnDadv20.isPressed()){
+            String x = MainMenuActivity.getRandomNumber(20);
+            String y = MainMenuActivity.getRandomNumber(20);
+            if(Integer.parseInt(x)<Integer.parseInt(y)){
+                lblOutputDadv20.setText(x);
+            }
+            else{
+                lblOutputDadv20.setText(y);
+            }
+        }
+    }
+
+
+}
+
+######
+END FifthEditionActivity.java
+
+START PathfinderActivity.java
+######
+
+package com.example.ceis320_finalapplication;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+public class PathfinderActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_pathfinder);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        Button btnInfo=(Button) findViewById(R.id.btnBackToMain);
+        btnInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { goMain(); }
+        });
+    }
+
+    private void goMain() {
+        Intent intent = new Intent(PathfinderActivity.this, MainMenuActivity.class);
+        this.startActivities(new Intent[]{intent});
+    }
+}
+
+######
+END PathfinderActivity.java
+
+START GeneralRollerActivity.java
+######
+
+package com.example.ceis320_finalapplication;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+public class GeneralRollerActivity extends AppCompatActivity implements View.OnClickListener {
+    private TextView lblOutputD2, lblOutputD3, lblOutputD4, lblOutputD6, lblOutputD8, lblOutputD10,
+            lblOutputD12, lblOutputD20, lblOutputD50, lblOutputD100, lblOutputPercentile;
+
+    private Button btnD2, btnD3, btnD4, btnD6, btnD8, btnD10, btnD12, btnD20, btnD50, btnD100, btnPercentile;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_general_roller);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        btnD2 = (Button) findViewById(R.id.btnGenD2);
+        btnD2.setOnClickListener(this);
+        btnD3 = (Button) findViewById(R.id.btnGenD3);
+        btnD3.setOnClickListener(this);
+        btnD4 = (Button) findViewById(R.id.btnGenD4);
+        btnD4.setOnClickListener(this);
+        btnD6 = (Button) findViewById(R.id.btnGenD6);
+        btnD6.setOnClickListener(this);
+        btnD8 = (Button) findViewById(R.id.btnGenD8);
+        btnD8.setOnClickListener(this);
+        btnD10 = (Button) findViewById(R.id.btnGenD10);
+        btnD10.setOnClickListener(this);
+        btnD12 = (Button) findViewById(R.id.btnGenD12);
+        btnD12.setOnClickListener(this);
+        btnD20 = (Button) findViewById(R.id.btnGenD20);
+        btnD20.setOnClickListener(this);
+        btnD50 = (Button) findViewById(R.id.btnGenD50);
+        btnD50.setOnClickListener(this);
+        btnD100 = (Button) findViewById(R.id.btnGenD100);
+        btnD100.setOnClickListener(this);
+        btnPercentile = (Button) findViewById(R.id.btnGenPercentile);
+        btnPercentile.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        String percentString = "";
+        lblOutputD2 = (TextView) findViewById(R.id.txtGenD2);
+        lblOutputD3 = (TextView) findViewById(R.id.txtGenD3);
+        lblOutputD4 = (TextView) findViewById(R.id.txtGenD4);
+        lblOutputD6 = (TextView) findViewById(R.id.txtGenD6);
+        lblOutputD8 = (TextView) findViewById(R.id.txtGenD8);
+        lblOutputD10 = (TextView) findViewById(R.id.txtGenD10);
+        lblOutputD12 = (TextView) findViewById(R.id.txtGenD12);
+        lblOutputD20 = (TextView) findViewById(R.id.txtGenD20);
+        lblOutputD50 = (TextView) findViewById(R.id.txtGenD50);
+        lblOutputD100 = (TextView) findViewById(R.id.txtGenD100);
+        lblOutputPercentile = (TextView) findViewById(R.id.txtGenPercentile);
+
+        if(btnD2.isPressed()){
+            lblOutputD2.setText(MainMenuActivity.getRandomNumber(2));
+        }
+        if(btnD3.isPressed()){
+            lblOutputD3.setText(MainMenuActivity.getRandomNumber(3));
+        }
+        if(btnD4.isPressed()){
+            lblOutputD4.setText(MainMenuActivity.getRandomNumber(4));
+        }
+        if(btnD6.isPressed()){
+            lblOutputD6.setText(MainMenuActivity.getRandomNumber(6));
+        }
+        if(btnD8.isPressed()){
+            lblOutputD8.setText(MainMenuActivity.getRandomNumber(8));
+        }
+        if(btnD10.isPressed()){
+            lblOutputD10.setText(MainMenuActivity.getRandomNumber(10));
+        }
+        if(btnD12.isPressed()){
+            lblOutputD12.setText(MainMenuActivity.getRandomNumber(12));
+        }
+        if(btnD20.isPressed()){
+            lblOutputD20.setText(MainMenuActivity.getRandomNumber(20));
+        }
+        if(btnD50.isPressed()){
+            lblOutputD50.setText(MainMenuActivity.getRandomNumber(50));
+        }
+        if(btnD100.isPressed()){
+            lblOutputD100.setText(MainMenuActivity.getRandomNumber(100));
+        }
+        if(btnPercentile.isPressed()){
+            percentString = MainMenuActivity.getRandomNumber(100)+"%";
+            lblOutputPercentile.setText(percentString);
+        }
+
+    }
+}
+
+######
+END GeneralRollerActivity.java
+
+START MultipleGeneralRollerActivity.java
+######
+
+package com.example.ceis320_finalapplication;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+import java.util.ArrayList;
+
+public class MultipleGeneralRollerActivity extends AppCompatActivity implements View.OnClickListener/*, AdapterView.OnItemClickListener*/ {
+    Spinner spnDice, spnNumber;
+    Button btnRoll;
+    TextView lblHighOutput, lblLowOutput, lblAvgOutput, lblTotalOutput, lblResultOutput, lblMultGenCustNum;
+    ArrayList<String> resultOfRolls = new ArrayList<>();
+    EditText txtCustomInput;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_multiple_general_roller);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        spnDice = (Spinner) findViewById(R.id.spnMultGenTypeOfDice);
+        spnNumber = (Spinner) findViewById(R.id.spnMultGenAmountOfDice);
+        btnRoll = (Button) findViewById(R.id.btnMultGenRollDie);
+        txtCustomInput = (EditText) findViewById(R.id.txtMultGenCustomInput);
+        lblHighOutput = (TextView) findViewById(R.id.lblMultGenHigh);
+        lblLowOutput = (TextView) findViewById(R.id.lblMultGenLow);
+        lblAvgOutput = (TextView) findViewById(R.id.lblMultGenAvg);
+        lblTotalOutput = (TextView) findViewById(R.id.lblMultGenTotal);
+        lblResultOutput = (TextView) findViewById(R.id.lblMultGenResult);
+        lblMultGenCustNum = (TextView) findViewById(R.id.lblMultGenCustNum);
+        lblResultOutput.setText("");
+        /*//Currently unable to do this, app crashes immediately
+        txtCustomInput.setVisibility(View.INVISIBLE);
+        lblMultGenCustNum.setVisibility(View.INVISIBLE);*/
+
+        btnRoll.setOnClickListener(this);
+
+
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        String resultToOutput = "";
+        int lowestRolled = 100;
+        int highestRolled = 0;
+        int numberRolled;
+        int totalRolled = 0;
+        int numberToRoll = 0;
+        int dieSidesNeeded = 1;
+        System.out.println(spnDice.getSelectedItem());
+        switch (spnDice.getSelectedItemPosition()){
+            case 0:
+                dieSidesNeeded = 2;
+                break;
+            case 1:
+                dieSidesNeeded = 3;
+                break;
+            case 2:
+                dieSidesNeeded = 4;
+                break;
+            case 3:
+                dieSidesNeeded = 6;
+                break;
+            case 4:
+                dieSidesNeeded = 8;
+                break;
+            case 5:
+                dieSidesNeeded = 10;
+                break;
+            case 6:
+                dieSidesNeeded = 12;
+                break;
+            case 7:
+                dieSidesNeeded = 20;
+                break;
+            case 8:
+                dieSidesNeeded = 50;
+                break;
+            case 9:
+                dieSidesNeeded = 100;
+                break;
+            case 10:
+                dieSidesNeeded = 100;
+                break;
+            default:
+                dieSidesNeeded = 1;
+                break;
+        }
+        System.out.print("Die sides needed = ");
+        System.out.println(dieSidesNeeded);
+        ///Currently unable to do this, app crashes immediately
+        /*if (spnNumber.getSelectedItem().equals("Custom")) {
+            txtCustomInput.setVisibility(View.VISIBLE);
+            lblMultGenCustNum.setVisibility(View.VISIBLE);
+        } else {
+            txtCustomInput.setVisibility(View.INVISIBLE);
+            lblMultGenCustNum.setVisibility(View.INVISIBLE);
+        }*/
+
+        if (spnNumber.getSelectedItem().equals("Custom")) {
+            try {
+                numberToRoll = Integer.parseInt(txtCustomInput.getText().toString());
+                //System.out.println(numberToRoll);
+            } catch (Exception e) {
+                System.out.println(e);
+                Toast.makeText(MultipleGeneralRollerActivity.this, "Please enter a real number", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            try {
+                numberToRoll = Integer.parseInt(spnNumber.getSelectedItem().toString());
+                System.out.println(numberToRoll);
+            } catch (Exception e) {
+                System.out.println(e);
+                Toast.makeText(MultipleGeneralRollerActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+            }
+        }
+        for(int x=0;x<numberToRoll;x++){
+            numberRolled = Integer.parseInt(MainMenuActivity.getRandomNumber(dieSidesNeeded));
+            if(resultToOutput.equals("")){resultToOutput = String.valueOf(numberRolled);}
+            else{resultToOutput = String.format("%s, %s", resultToOutput, String.valueOf(numberRolled));}
+            resultOfRolls.add(String.valueOf(numberRolled));
+            totalRolled += numberRolled;
+            if(numberRolled>highestRolled){highestRolled=numberRolled;}
+            if(lowestRolled>numberRolled){lowestRolled=numberRolled;}
+            System.out.println(x);
+        }
+        System.out.println("success");
+        lblTotalOutput.setText(String.valueOf(totalRolled));
+        lblAvgOutput.setText(String.valueOf(totalRolled/numberToRoll));
+        lblHighOutput.setText(String.valueOf(highestRolled));
+        lblLowOutput.setText(String.valueOf(lowestRolled));
+        lblResultOutput.setText(resultToOutput);
+        System.out.println(totalRolled);
+        System.out.println(String.valueOf(totalRolled/numberToRoll));
+        System.out.println(String.valueOf(highestRolled));
+        System.out.println(String.valueOf(lowestRolled));
+        System.out.println(resultToOutput);
+
+    /*@Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+    }*/
+    }
+}
